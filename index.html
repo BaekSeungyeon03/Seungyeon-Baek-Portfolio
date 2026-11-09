@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Seungyeon Baek — Artist Portfolio" />
+  <title>Seungyeon Baek</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="artist-name" href="index.html">Seungyeon Baek</a>
+    <a class="contact-link" href="pages/contact.html">contact</a>
+  </header>
+
+  <nav class="index-nav" aria-label="Main navigation">
+    <ul>
+      <li class="nav-item">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="works-submenu">
+          works <span class="toggle-mark">▶</span>
+        </button>
+        <ul class="submenu" id="works-submenu">
+          <li><a href="pages/paintings.html">paintings</a>
+            <ul class="year-list">
+              <li><a href="pages/paintings.html#2026">2026</a></li>
+              <li><a href="pages/paintings.html#2025">2025</a></li>
+              <li><a href="pages/paintings.html#2024">2024</a></li>
+              <li><a href="pages/paintings.html#2023">2023</a></li>
+            </ul>
+          </li>
+          <li><a href="pages/zines.html">zines / books</a></li>
+          <li><a href="pages/videos.html">videos</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="texts-submenu">
+          texts <span class="toggle-mark">▶</span>
+        </button>
+        <ul class="submenu" id="texts-submenu">
+          <li><a href="pages/statement.html">statement</a></li>
+          <li><a href="pages/critics.html">critics</a></li>
+          <li><a href="pages/notes.html">notes</a></li>
+        </ul>
+      </li>
+      <li><a href="pages/drawings.html">drawings</a></li>
+      <li><a href="pages/cv.html">cv</a></li>
+    </ul>
+  </nav>
+
+  <main class="home">
+    <figure class="featured-work">
+      <img src="works/카레닌의 시간.png" alt="Representative painting by Seungyeon Baek"
+           onerror="this.onerror=null;this.src='카레닌의 시간.png';" />
+      <figcaption>
+        <span><카레닌의 시간></span>
+        <span>2026</span>
+        <span>광목에 파이버페이스트, 형광 피그먼트 분채, 동양화 튜브 물감</span>
+        <span>27.2 x 35cm</span>
+      </figcaption>
+    </figure>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
