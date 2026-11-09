@@ -1,0 +1,214 @@
+/* Seungyeon Baek — portfolio home */
+:root {
+  --page-padding: 24px;
+  --font-size: 12px;
+  --line-height: 1.55;
+  --text: #111;
+  --background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.site-header {
+  position: fixed;
+  top: var(--page-padding);
+  left: var(--page-padding);
+  right: var(--page-padding);
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.site-header a {
+  pointer-events: auto;
+}
+
+.artist-name,
+.contact-link {
+  display: inline-block;
+}
+
+.index-nav {
+  position: fixed;
+  top: 76px;
+  left: var(--page-padding);
+  z-index: 20;
+  width: 150px;
+}
+
+.index-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.index-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-bottom: 2px;
+}
+
+.nav-toggle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.toggle-mark {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.nav-toggle:hover .toggle-mark,
+.nav-toggle[aria-expanded="true"] .toggle-mark {
+  opacity: 1;
+}
+
+.submenu {
+  display: none;
+  padding: 5px 0 7px 12px !important;
+}
+
+.submenu {
+    display: none;
+    padding: 5px 0 7px 12px;
+}
+
+.submenu > li {
+  margin-bottom: 3px;
+}
+
+/* works, texts에 마우스 호버 시 하위 메뉴 표시 */
+.nav-item:hover > .submenu {
+    display: block;
+}
+
+/* 키보드 접근성 */
+.nav-item:focus-within > .submenu {
+    display: block;
+}
+
+/* paintings의 연도 메뉴 */
+.year-list {
+    display: none;
+    padding: 3px 0 4px 12px;
+}
+
+/* paintings에 호버 시 연도 표시 */
+.submenu > li:hover > .year-list {
+    display: block;
+}
+
+
+.index-nav a:hover,
+.nav-toggle:hover {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.home {
+  min-height: 100vh;
+  padding: 90px 24px 60px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-work {
+  position: relative;
+  width: min(62vw, 900px);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featured-work img {
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 170px);
+  object-fit: contain;
+}
+
+.featured-work figcaption {
+  position: fixed;
+  right: var(--page-padding);
+  bottom: var(--page-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+
+/* Small screens */
+@media (max-width: 700px) {
+  :root {
+    --page-padding: 16px;
+    --font-size: 12px;
+  }
+
+  .index-nav {
+    top: 62px;
+    width: 125px;
+  }
+
+  .home {
+    padding: 150px 16px 100px;
+    align-items: flex-start;
+  }
+
+  .featured-work {
+    width: 100%;
+    margin-top: 8vh;
+  }
+
+  .featured-work img {
+    max-height: 65vh;
+  }
+
+  .featured-work figcaption {
+    position: static;
+    margin-top: 10px;
+    align-items: flex-end;
+    width: 100%;
+  }
+}
